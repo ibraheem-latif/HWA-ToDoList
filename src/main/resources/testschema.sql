@@ -1,0 +1,9 @@
+DROP TABLE IF EXISTS `to_do_item`;
+
+CREATE TABLE `to_do_item`(
+	`id` BIGINT AUTO_INCREMENT,
+	`category` VARCHAR(255) NOT NULL,
+	`name` VARCHAR(255) NOT NULL,
+	`complete` BOOLEAN NOT NULL,
+	PRIMARY KEY(`id`)
+);

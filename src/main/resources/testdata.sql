@@ -1,0 +1,1 @@
+INSERT INTO `to_do_item`(`category`, `name`, `complete`) VALUES ('Shopping', 'milk', false);
