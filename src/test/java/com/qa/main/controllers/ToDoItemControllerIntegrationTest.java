@@ -75,6 +75,21 @@ public class ToDoItemControllerIntegrationTest {
 				.andExpect(content().json(ToDoItemJSON));
 		
 	}
+	
+	@Test
+	public void readByCategoryTest() throws Exception {
+		
+		List<ToDoItem> result = new ArrayList<>();
+		// Add the single entry to the list
+		result.add(new ToDoItem(1L, "Shopping","milk", false));
+		// Convert the list to JSON (The API responds in JSON)
+		String resultAsJSON = mapper.writeValueAsString(result);
+		
+		mvc.perform(get("/item/getByCategory/Shopping")
+				.contentType(MediaType.APPLICATION_JSON))
+				.andExpect(content().json(resultAsJSON));
+		
+	}
 
 	@Test
 	public void updateTest() throws Exception {

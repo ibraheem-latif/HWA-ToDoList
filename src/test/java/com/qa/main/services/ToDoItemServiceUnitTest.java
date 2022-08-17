@@ -67,6 +67,21 @@ public class ToDoItemServiceUnitTest {
 	}
 	
 	@Test
+	public void testGetCategory() {
+		
+		String category = "Shopping";
+		//Create an object for saving
+		List<ToDoItem> result = new ArrayList<>();
+		result.add(new ToDoItem(1L,"Shopping","milk",false));
+		
+		Mockito.when(repo.findToDoItemByCategory(category)).thenReturn(result);
+		
+		assertEquals(result,service.getByCategory(category));
+		
+		
+	}
+	
+	@Test
 	public void updateByIdTest() {
 		long id =1L;
 		ToDoItem entry = new ToDoItem("Clothes", "cap", true);	
