@@ -8,19 +8,19 @@ The procedures below will get a local copy of the project up and running for dev
 
 ### Prerequisites
 #### Essential
-*The Java SE Development kit is required and may be downloaded from here:
+*The Java SE Development kit is required and may be downloaded from here:*
 <br>https://www.oracle.com/java/technologies/downloads/<br>
-*MySQL Community, as well as MySQL Workbench, is required:
+*MySQL Community, as well as MySQL Workbench, is required:*
 <br>https://dev.mysql.com/downloads/windows/installer/8.0.html <br>
 
 #### Additional
-*Gitbash for terminal access:
+*Gitbash for terminal access:*
  <br>https://git-scm.com/downloads <br>
-*Spring boot IDE for API alterations:
+*Spring boot IDE for API alterations:*
 <br>https://spring.io/tools <br>
-*VS code for any CSS, HTML or Javascript changes:
+*VS code for any CSS, HTML or Javascript changes:*
 <br>https://code.visualstudio.com/download <br>
-*Apache Maven for testing and dependencies:
+*Apache Maven for testing and dependencies:*
  <br>https://maven.apache.org/download.cgi <br>
  <br>[JUnit](https://mvnrepository.com/artifact/junit/junit) <br>
         [Mockito](https://mvnrepository.com/artifact/org.mockito/mockito-core) <br>
