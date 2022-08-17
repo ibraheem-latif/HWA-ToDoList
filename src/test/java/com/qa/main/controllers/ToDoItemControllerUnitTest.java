@@ -1,6 +1,7 @@
 package com.qa.main.controllers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
+import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 
 import org.junit.jupiter.api.Test;
@@ -45,5 +46,22 @@ public class ToDoItemControllerUnitTest {
 				.content(entryAsJSON))
 				.andExpect(content().json(resultAsJSON));
 	}
+	
+	@Test
+	void updateTest() throws Exception {
+		//Create an Object to check result
+		ToDoItem result = new ToDoItem(1L, "Clothes", "T-shirt", false);
+		String resultAsJSON = mapper.writeValueAsString(result);
+		
+		Mockito.when(service.updateToDoItem(1L, result)).thenReturn(result);
+		
+		mvc.perform(put("/item/update/1")
+			.contentType(MediaType.APPLICATION_JSON)
+			.content(resultAsJSON))
+			.andExpect(content().json(resultAsJSON));
+	}
+	
+
+	
 
 }
