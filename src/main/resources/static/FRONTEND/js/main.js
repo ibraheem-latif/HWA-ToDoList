@@ -13,7 +13,7 @@ let idInput = document.querySelector("#idInput");
 // -- Buttons
 let createBtn = document.querySelector("#createBtn");
 let updateBtn = document.querySelector("#updateBtn");
-
+let closeBtn = document.querySelector("#closeBtn");
 
 // functions
 let printResults = (result) => {
@@ -35,7 +35,14 @@ let printResults = (result) => {
     editBtn.textContent="Edit";
     editBtn.id = "button";
     editBtn.setAttribute("Class",'btn btn-primary btn-sm');
-    editBtn.setAttribute("onClick", `edit(${result.id})`);
+    // editBtn.setAttribute("onClick", `edit(${result.id})`);
+    editBtn.addEventListener("click",() =>{modal.show() });
+
+   
+let modal = new bootstrap.Modal(document.getElementById('editModal'),{keyboard:false});
+
+
+
 
     entryParent.appendChild(entryDiv);
     entryParent.appendChild(delBtn);
