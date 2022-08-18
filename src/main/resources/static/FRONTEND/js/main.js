@@ -35,7 +35,7 @@ let printResults = (result) => {
     editBtn.textContent="Edit";
     editBtn.id = "button";
     editBtn.setAttribute("Class",'btn btn-primary btn-sm');
-    editBtn.setAttribute("onClick", `update(${result.id})`);
+    editBtn.setAttribute("onClick", `edit(${result.id})`);
 
     entryParent.appendChild(entryDiv);
     entryParent.appendChild(delBtn);
@@ -72,14 +72,26 @@ let create = () => {
         }).catch(err => { console.log(err); })
 }
 
-let update = (id) => {
+let update = () => {
 
     let obj = {
         "category": catInput.value,
         "name": nameInput.value,
         "complete": compInput.value
     }
-// ------------------------------------------idInput.value
+
+    axios.put(`http://localhost:8080/item/update/${idInput.value}`, obj)
+        .then(res => {
+            getAll();
+        }).catch(err => { console.log(err); })
+}
+let edit = (id) => {
+
+    let obj = {
+        "category": catInput.value,
+        "name": nameInput.value,
+        "complete": compInput.value
+    }
     axios.put(`http://localhost:8080/item/update/${id}`, obj)
         .then(res => {
             getAll();
