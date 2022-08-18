@@ -35,13 +35,26 @@ Clone the repository to your local computer at a secure location using gitBash.
 ```
 
 ```
-In the project folder, run the JAR file SNAPSHOT 0.0.1.
+Open a terminal or CMD in the project folder
+ - Type "java -jar HWAProject-0.0.1-SNAPSHOT.jar"
+ - CRTL+C to close
 ```
 
 ```
-maybe show a terminal example???
+The application is now running
+- open a web browser
+- Type "localhost8080" in URL
 ```
-
+## Example Build
+Starting the JAR
+-
+-
+-
+Opening the web page
+-
+-
+-
+web page in action 
 ## Running the Tests
 Right-click on the project in the Spring tool IDE and select "Coverage As" then "Junit," which will execute all of the tests. Alternatively, enter CMD and type "mvn clean install." This will run all of the tests and provide a coverage table indicating how much of the code was tested and what percentage passed/failed/erroneously.
 
