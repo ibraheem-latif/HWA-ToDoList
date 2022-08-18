@@ -47,13 +47,13 @@ The application is now running
 ```
 ## Example Build
 Starting the JAR
--
--
--
+
+<img src="./HWAProject/src/main/resources/static/imgs/JARterminal.png" alt="">
+
 Opening the web page
--
--
--
+
+<img src="./HWAProject/src/main/resources/static/imgs/WebPage.png" alt="">
+
 web page in action 
 ## Running the Tests
 Right-click on the project in the Spring tool IDE and select "Coverage As" then "Junit," which will execute all of the tests. Alternatively, enter CMD and type "mvn clean install." This will run all of the tests and provide a coverage table indicating how much of the code was tested and what percentage passed/failed/erroneously.
