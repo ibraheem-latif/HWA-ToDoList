@@ -1,0 +1,81 @@
+:root {
+	--dark: #374151;
+	--darker: #1F2937;
+	--darkest: #111827;
+	--grey: #6B7280;
+	--pink: #EC4899;
+	--purple: #8B5CF6;
+	--light: #EEE;
+}
+
+
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: "Fira sans", sans-serif;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	color: #FFF;
+	background-color: var(--dark);
+}
+
+#form-div {
+
+    
+     display: inline-grid;
+    width : 25%;
+    margin-left: 35%;
+    /* padding: 10px;   */
+    margin-top: 5%;
+    /* flex: 1 1 0%; */
+	background-color: var(--darker);
+	padding: 1rem;
+	border-radius: 1rem;
+	/* margin-right: 1rem; */
+	color: var(--light);
+	font-size: 1.25rem;
+
+
+}
+
+#result-div{
+
+ 
+    display: inline-grid;
+    width : 40%;
+    margin-left: 28%;
+   margin-top: 1%;
+  
+	
+	background-color: var(--darkest);
+	padding: 1rem;
+	border-radius: 1rem;
+	margin-bottom: 1rem;
+}
+
+.entry-parent{
+    padding-left : 30%;
+}
+
+.entry-div{
+    
+    border-width: 3px;
+    border-radius: 4px;
+   
+    margin-top:4px;
+    width:50%;
+    text-align:center;
+   
+    display: inline-grid;
+
+}
+
+#idInput{
+    display : inline-grid;
+    width: 20%;
+}
