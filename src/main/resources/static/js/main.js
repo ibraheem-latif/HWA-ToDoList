@@ -10,10 +10,16 @@ let catInput = document.querySelector("#categoryInput");
 let nameInput = document.querySelector("#nameInput");
 let compInput = document.querySelector("#completeInput");
 let idInput = document.querySelector("#idInput");
+
+// -- Modal Inputs
+let catInputM = document.querySelector("#categoryInputM");
+let nameInputM = document.querySelector("#nameInputM");
+let compInputM = document.querySelector("#completeInputM");
 // -- Buttons
 let createBtn = document.querySelector("#createBtn");
 let updateBtn = document.querySelector("#updateBtn");
 let closeBtn = document.querySelector("#closeBtn");
+let saveBtn = document.querySelector("#saveBtn");
 
 // functions
 let printResults = (result) => {
@@ -25,22 +31,23 @@ let printResults = (result) => {
     entryDiv.textContent = `${result.id} | ${result.category} | ${result.name} | ${result.complete} `;
 
     let delBtn = document.createElement("button");
-    delBtn.textContent="Delete";
+    delBtn.textContent = "Delete";
     delBtn.type = "button";
-    delBtn.setAttribute("Class","btn btn-danger btn-sm");
+    delBtn.setAttribute("Class", "btn btn-danger btn-sm");
     delBtn.setAttribute("onClick", `del(${result.id})`);
-    
-    
+
+
     let editBtn = document.createElement("button");
-    editBtn.textContent="Edit";
+    editBtn.textContent = "Edit";
     editBtn.id = "button";
-    editBtn.setAttribute("Class",'btn btn-primary btn-sm');
+    editBtn.setAttribute("Class", 'btn btn-primary btn-sm');
     // editBtn.setAttribute("onClick", `edit(${result.id})`);
-    editBtn.addEventListener("click",() =>{modal.show() });
+    editBtn.addEventListener("click", () => { modal.show() });
 
-   
-let modal = new bootstrap.Modal(document.getElementById('editModal'),{keyboard:false});
 
+    let modal = new bootstrap.Modal(document.getElementById('editModal'), { keyboard: false });
+
+    saveBtn.setAttribute("onClick", `edit(${result.id})`);
 
 
 
@@ -95,15 +102,16 @@ let update = () => {
 let edit = (id) => {
 
     let obj = {
-        "category": catInput.value,
-        "name": nameInput.value,
-        "complete": compInput.value
+        "category": catInputM.value,
+        "name": nameInputM.value,
+        "complete": compInputM.value
     }
     axios.put(`http://localhost:8080/item/update/${id}`, obj)
         .then(res => {
             getAll();
         }).catch(err => { console.log(err); })
 }
+
 
 let del = (id) => {
 
@@ -116,3 +124,4 @@ let del = (id) => {
 // listeners 
 createBtn.addEventListener("click", create);
 updateBtn.addEventListener("click", update);
+saveBtn.addEventListener("click", `edit(${result.id})`);
