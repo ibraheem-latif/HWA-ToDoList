@@ -124,10 +124,4 @@ This project is licensed under the MIT license - see the [LICENSE.md](LICENSE.md
 
 *For help in [Choosing a license](https://choosealicense.com/)*
 
-## Acknowledgments
 
-* *Trainer* - [AnoushLowton](https://github.com/ALowtonQA)
-* *Trainer* - [JordanBenBelaid](https://github.com/jordanbenbelaid)
-* *Trainer* - [Edward Reynolds](https://github.com/Edrz-96)
-* *Trainer* - [Piers Barber](https://github.com/PCMBarber)
-* *Testing Developer* - [JUnit](https://junit.org/junit5/docs/current/user-guide/#running-tests)
